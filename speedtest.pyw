@@ -17,6 +17,7 @@ raw_data = OrderedDict([('Date', [current_date]),
                         ('S longitude', [server_info['lon']]),
                         ('S id', [server_info['id']])])
 
+
 columns = [k for k in raw_data.keys()]
 df = pd.DataFrame(data=raw_data, columns=columns)
 df.to_csv(csv_location, mode='a', ignore_index=True, header=False)
